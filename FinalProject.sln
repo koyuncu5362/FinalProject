@@ -6,8 +6,14 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entites", "Entites\Entites.csproj", "{EAEB6A7C-DFAD-4457-BF15-BC9E4044C8D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F55C7AC3-7895-4118-9ED6-EE09CFDF22BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EAEB6A7C-DFAD-4457-BF15-BC9E4044C8D0} = {EAEB6A7C-DFAD-4457-BF15-BC9E4044C8D0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{A3B5E809-1215-4508-A90C-499069CB1351}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F55C7AC3-7895-4118-9ED6-EE09CFDF22BA} = {F55C7AC3-7895-4118-9ED6-EE09CFDF22BA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{DF120EFE-58CC-49B0-A6D7-2124E3A0AA16}"
 EndProject

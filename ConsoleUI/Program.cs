@@ -1,10 +1,17 @@
-﻿namespace ConsoleUI
+﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
+
+namespace ConsoleUI
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ProductManager productManager = new ProductManager(new EfProductDal());
+            foreach (var product in productManager.GetByUnitPrice(40, 100))
+            {
+                Console.WriteLine(product.ProductName);
+            }
         }
     }
 }
